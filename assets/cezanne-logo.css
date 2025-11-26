@@ -1,0 +1,984 @@
+/* CÉZANNE - Luxury White & Black Theme */
+
+/* ========================================
+   GLOBAL WHITE BACKGROUND & BLACK TEXT
+   ======================================== */
+
+html,
+body {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+body {
+  background-color: #ffffff !important;
+}
+
+/* Remove texture overlay from body */
+body::before {
+  display: none !important;
+}
+
+/* All sections - pure white */
+section,
+.section,
+.shopify-section {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Fix hero/banner section positioning */
+.hero,
+.banner,
+.section-hero,
+section:first-of-type {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Page wrapper white */
+.page-width,
+.page-width-container,
+.main-content {
+  background: #ffffff !important;
+}
+
+/* Header white */
+.section-header,
+header,
+.header-wrapper,
+header.header {
+  background: #ffffff !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* Product page white */
+#MainProduct-main,
+.main-product,
+.product {
+  background: #ffffff !important;
+}
+
+/* Footer white */
+.footer {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+.footer__heading,
+.footer__content-top,
+.footer a,
+.footer__list-social a {
+  color: #000000 !important;
+}
+
+/* Cart and modals white */
+.cart-drawer,
+.cart-notification,
+.modal,
+details-modal {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Buttons and inputs maintain black/white */
+button,
+.button,
+input,
+select,
+textarea {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+button:hover,
+.button:hover {
+  background: #f5f5f5 !important;
+  color: #000000 !important;
+}
+
+/* Cards white */
+.card,
+.card-product,
+.product-card {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Text elements black */
+p, span, div, a, h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #000000 !important;
+}
+
+/* Links black with underline on hover */
+a {
+  color: #000000 !important;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+a:hover {
+  border-bottom-color: #000000;
+}
+
+/* ========================================
+   CÉZANNE LOGO STYLING
+   ======================================== */
+
+/* Hide any logo images completely */
+.header__heading-link.cezanne-text-logo img,
+.header__heading-link.cezanne-text-logo .header__heading-logo {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Style the text logo */
+.header__heading-link.cezanne-text-logo .h2 {
+  font-family: 'Playfair Display', 'Times New Roman', serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.25em !important;
+  text-transform: uppercase !important;
+  color: #000000 !important;
+  font-size: 2.6rem !important;
+  line-height: 1.1 !important;
+  display: inline-block !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Elegant underline decoration */
+.header__heading-link.cezanne-text-logo .h2::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #dd1d1d, transparent);
+  opacity: 0.7;
+}
+
+/* Hover effects */
+.header__heading-link.cezanne-text-logo:hover .h2 {
+  transform: translateY(-1px);
+}
+
+.header__heading-link.cezanne-text-logo:hover .h2::before {
+  opacity: 1;
+  background: linear-gradient(to right, transparent, #000000, transparent);
+}
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 749px) {
+  /* Reduce logo size on mobile */
+  .header__heading-link.cezanne-text-logo .h2 {
+    font-size: 1.4rem !important;
+  }
+
+  .header__heading-link.cezanne-text-logo .h2::before {
+    bottom: -4px;
+    width: 70%;
+    height: 1.5px;
+  }
+
+  /* Reduce header padding on mobile to save space */
+  .section-header,
+  header,
+  .header-wrapper,
+  header.header {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  .header {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  /* Fix logo position and prevent overlay */
+  .header__heading-link.cezanne-text-logo {
+    position: relative !important;
+    z-index: 10 !important;
+    max-width: 60% !important;
+  }
+
+  /* Ensure header doesn't overlap content */
+  .header-wrapper {
+    position: relative !important;
+    z-index: 100 !important;
+  }
+
+  /* Reduce ALL title sizes globally on mobile */
+  h1, .h1 {
+    font-size: 1.1rem !important;
+  }
+
+  h2, .h2 {
+    font-size: 1rem !important;
+  }
+
+  h3, .h3 {
+    font-size: 0.95rem !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header__heading-link.cezanne-text-logo .h2 {
+    font-size: 1.2rem !important;
+  }
+
+  /* Extra compact header for very small screens */
+  .section-header,
+  header,
+  .header-wrapper,
+  header.header {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+
+  /* Make header icons smaller */
+  .header__icon {
+    width: 1.8rem !important;
+    height: 1.8rem !important;
+  }
+
+  /* Reduce announcement bar text size */
+  .announcement-bar__message {
+    font-size: 0.75rem !important;
+  }
+
+  .announcement-bar {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+
+  /* Reduce all heading sizes on very small screens */
+  h1, .h1 {
+    font-size: 1.1rem !important;
+  }
+
+  h2, .h2 {
+    font-size: 1rem !important;
+  }
+
+  h3, .h3 {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* ========================================
+   PRODUCT PAGE SPACING FIX
+   ======================================== */
+
+/* Fix excessive spacing on product page */
+.template-product section,
+.template-product .section {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
+.template-product #MainProduct-main {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.template-product section + section,
+.template-product .section + .section {
+  padding-top: 0.25rem !important;
+}
+
+@media screen and (max-width: 749px) {
+  .template-product section,
+  .template-product .section {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+
+  .template-product #MainProduct-main {
+    padding-top: 0 !important;
+    padding-bottom: 0.25rem !important;
+  }
+
+  .template-product section + section,
+  .template-product .section + .section {
+    padding-top: 0 !important;
+  }
+
+  /* Reduce product title size on mobile */
+  .template-product .product__title,
+  .template-product h1.product__title {
+    font-size: 0.75rem !important;
+    padding: 0.1rem 0 0.2rem 0 !important;
+    margin: 0 0 0.15rem 0 !important;
+    line-height: 1.05 !important;
+    font-weight: 600 !important;
+  }
+
+  /* Make variant options smaller on mobile */
+  .product-form__input,
+  .product-variant-picker {
+    font-size: 0.85rem !important;
+  }
+
+  /* Reduce variant pill/button sizes */
+  .product-form__input label,
+  label[for^="product-form"] {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* Make color swatches smaller */
+  .color-swatch {
+    width: 2rem !important;
+    height: 2rem !important;
+  }
+
+  /* Reduce spacing in product info container */
+  .product__info-container {
+    gap: 0.5rem !important;
+  }
+
+  .product__info-container > * {
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  /* Tighter spacing for price elements */
+  .price,
+  .product__price {
+    font-size: 1.2rem !important;
+    margin: 0.25rem 0 !important;
+  }
+
+  /* Reduce add to cart button height */
+  .product-form__submit {
+    padding: 0.75rem 1rem !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Extra compact product page for very small screens */
+@media screen and (max-width: 480px) {
+  .template-product .product__title,
+  .template-product h1.product__title {
+    font-size: 0.7rem !important;
+    padding: 0.08rem 0 0.15rem 0 !important;
+    margin: 0 0 0.15rem 0 !important;
+    font-weight: 600 !important;
+  }
+
+  .product-form__input label,
+  label[for^="product-form"] {
+    padding: 0.3rem 0.6rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  .price,
+  .product__price {
+    font-size: 1.1rem !important;
+  }
+
+  .product-form__submit {
+    padding: 0.6rem 0.8rem !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* Reduce quantity selector size */
+  .quantity__input {
+    font-size: 0.85rem !important;
+    padding: 0.3rem !important;
+  }
+
+  .quantity__button {
+    padding: 0.3rem !important;
+  }
+}
+
+.template-product .product__info-wrapper--top-padding {
+  padding-top: 0.25rem !important;
+}
+
+@media screen and (max-width: 749px) {
+  .template-product .product__info-wrapper--top-padding {
+    padding-top: 0 !important;
+  }
+}
+
+.template-product .product__info-container > div {
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+@media screen and (max-width: 749px) {
+  .template-product .product__info-container > div {
+    margin-top: 0.1rem !important;
+    margin-bottom: 0.1rem !important;
+  }
+}
+
+/* Tighten grid spacing between image and info */
+.product {
+  grid-gap: 0.25rem !important;
+  gap: 0.25rem !important;
+}
+
+.product__media-wrapper {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Reduce space above product image */
+#MainProduct-main .product__media-wrapper {
+  margin-top: -0.5rem !important;
+}
+
+/* ========================================
+   LUXURY REFINEMENTS - MINIMALIST AESTHETIC
+   ======================================== */
+
+/* Clean borders only where needed */
+.card,
+.product-card {
+  border: 1px solid #e0e0e0;
+}
+
+/* Subtle shadows for luxury feel */
+.card:hover,
+.product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Refined typography */
+h1, .h1 {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 0 1.5rem 0 !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+h2, .h2 {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.25rem 0 1rem 0 !important;
+  margin: 0 0 1rem 0 !important;
+}
+
+p {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  padding: 0.5rem 0 !important;
+  margin: 0.5rem 0 !important;
+}
+
+/* Product title specific styling */
+.product__title {
+  padding: 0.5rem 0 1.5rem 0 !important;
+  margin: 0 0 1rem 0 !important;
+}
+
+/* Form elements styling */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #d0d0d0 !important;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+  outline: none;
+}
+
+/* Badge and accent colors - keep minimal */
+.badge {
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+}
+
+/* Remove any cream/off-white backgrounds */
+.color-background-1,
+.color-background-2,
+[class*="background-1"],
+[class*="background-2"] {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* ========================================
+   LUXURY ANIMATIONS - EDITORIAL STYLE
+   ======================================== */
+
+/* ========================================
+   1. ULTRA-SLOW FADE-IN (Signature Luxury Look)
+   0s → 1s opacity over 1.4s–1.8s
+   ======================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInHero {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero images fade in slowly */
+.hero__media,
+.hero__image,
+.hero img,
+.banner__media,
+.banner__image,
+.banner img {
+  animation: fadeInHero 1.8s ease-out forwards !important;
+}
+
+/* Product images fade in */
+.product__media-wrapper,
+.product-image,
+.product__img,
+.product-gallery img {
+  animation: fadeIn 1.4s ease-out forwards !important;
+}
+
+/* Product titles fade in with slight delay */
+.product__title,
+.product-title,
+h1.product__title {
+  animation: fadeIn 1.6s ease-out 0.2s both !important;
+}
+
+/* Buttons fade in with delay */
+button,
+.button,
+.btn,
+.product-form__submit {
+  animation: fadeIn 1.6s ease-out 0.4s both !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Section headings fade in */
+.section__heading,
+.section h2,
+.section h1 {
+  animation: fadeIn 1.4s ease-out forwards !important;
+}
+
+/* ========================================
+   2. PARALLAX SCROLLING (Cinematic Effect)
+   Background moves slower than foreground
+   ======================================== */
+
+.hero__media,
+.hero__image,
+.banner__media,
+.banner__image {
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+/* Parallax wrapper for content */
+.parallax-section {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+/* ========================================
+   3. DELAYED STAGGER ANIMATIONS
+   Each element appears one after another
+   ======================================== */
+
+@keyframes staggerFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger {
+  opacity: 0;
+  animation: staggerFadeUp 1s ease-out forwards;
+}
+
+.stagger:nth-child(1) { animation-delay: 0.2s; }
+.stagger:nth-child(2) { animation-delay: 0.4s; }
+.stagger:nth-child(3) { animation-delay: 0.6s; }
+.stagger:nth-child(4) { animation-delay: 0.8s; }
+.stagger:nth-child(5) { animation-delay: 1s; }
+.stagger:nth-child(6) { animation-delay: 1.2s; }
+
+/* Apply stagger to product grid items */
+.product-card,
+.card-product,
+.product-grid-item {
+  opacity: 0;
+  animation: staggerFadeUp 1.2s ease-out forwards;
+}
+
+.product-card:nth-child(1),
+.card-product:nth-child(1),
+.product-grid-item:nth-child(1) { animation-delay: 0.15s; }
+
+.product-card:nth-child(2),
+.card-product:nth-child(2),
+.product-grid-item:nth-child(2) { animation-delay: 0.3s; }
+
+.product-card:nth-child(3),
+.card-product:nth-child(3),
+.product-grid-item:nth-child(3) { animation-delay: 0.45s; }
+
+.product-card:nth-child(4),
+.card-product:nth-child(4),
+.product-grid-item:nth-child(4) { animation-delay: 0.6s; }
+
+.product-card:nth-child(5),
+.card-product:nth-child(5),
+.product-grid-item:nth-child(5) { animation-delay: 0.75s; }
+
+.product-card:nth-child(6),
+.card-product:nth-child(6),
+.product-grid-item:nth-child(6) { animation-delay: 0.9s; }
+
+/* ========================================
+   4. SMOOTH LUXURY HOVER ANIMATIONS
+   Subtle 1–2% zoom + 2–3px upward lift
+   0.2s–0.4s transition
+   ======================================== */
+
+.luxury-image,
+.product__img,
+.card-product img,
+.product-image {
+  transition: all 0.35s ease;
+  will-change: transform;
+}
+
+.luxury-image:hover,
+.product__img:hover,
+.card-product:hover img,
+.product-image:hover {
+  transform: scale(1.02) translateY(-3px) !important;
+}
+
+/* Subtle hover lift on cards */
+.card,
+.product-card,
+.card-product {
+  transition: all 0.4s ease;
+  will-change: transform, box-shadow;
+}
+
+.card:hover,
+.product-card:hover,
+.card-product:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ========================================
+   5. SLOW OPACITY HOVER ON BUTTONS
+   Dior-style subtle darkening
+   0.3s–0.5s transition
+   ======================================== */
+
+button,
+.button,
+.btn,
+.product-form__submit,
+a.button {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #000000 !important;
+  transition: all 0.4s ease !important;
+  will-change: background-color, color, border-color;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+button:hover,
+.button:hover,
+.btn:hover,
+.product-form__submit:hover,
+a.button:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #000000 !important;
+  transition: all 0.4s ease !important;
+}
+
+/* Secondary button hover (inverted) */
+button.secondary,
+.button.secondary {
+  background-color: transparent !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+}
+
+button.secondary:hover,
+.button.secondary:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* ========================================
+   6. CINEMATIC HERO IMAGE ZOOM
+   Ken Burns Effect: 100% → 103% over 12s
+   ======================================== */
+
+@keyframes slowZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.03);
+  }
+}
+
+.hero-zoom,
+.hero__media--zoom,
+.banner-zoom,
+.hero img,
+.hero__image {
+  animation: slowZoom 14s ease-out forwards !important;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hero-zoom,
+  .hero__media--zoom,
+  .banner-zoom {
+    animation: none !important;
+  }
+}
+
+/* ========================================
+   7. SLIDING TEXT REVEAL
+   Text slides in horizontally very slow
+   Celine / Saint Laurent style
+   ======================================== */
+
+@keyframes revealText {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes revealTextRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.text-reveal,
+.reveal-left {
+  animation: revealText 1.4s ease-out forwards !important;
+}
+
+.text-reveal-right,
+.reveal-right {
+  animation: revealTextRight 1.4s ease-out forwards !important;
+}
+
+/* Apply to section text */
+.section__text,
+.section-text {
+  animation: revealText 1.2s ease-out forwards !important;
+}
+
+/* ========================================
+   8. SMOOTH PAGE TRANSITIONS
+   Fade in/out on page load and navigation
+   ======================================== */
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pageExit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+body,
+main,
+.main-content {
+  animation: pageEnter 0.8s ease-out;
+}
+
+/* ========================================
+   9. LUXURY TRANSITIONS - GENERAL POLISH
+   ======================================== */
+
+/* All links get smooth transitions */
+a {
+  transition: all 0.3s ease !important;
+  will-change: color, border-color;
+}
+
+/* Form inputs get smooth focus transitions */
+input,
+textarea,
+select {
+  transition: all 0.3s ease !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #000000 !important;
+}
+
+/* ========================================
+   10. SCROLL REVEAL - FADE IN ON SCROLL
+   Elements appear as they enter viewport
+   ======================================== */
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================================
+   FLOATING ACTION BAR SIZE REDUCTION
+   Reduce floating music player by 35-40%
+   ======================================== */
+
+/* Reduce floating button container size */
+.music-player__btn,
+.floating-btn {
+  width: 3rem !important;  /* Reduced from 5rem (40% reduction) */
+  height: 3rem !important; /* Reduced from 5rem (40% reduction) */
+  padding: 0.3rem !important; /* Reduced padding */
+}
+
+/* Reduce icon size inside the button */
+.music-player__btn svg {
+  height: 1.5rem !important; /* Reduced from 2.5rem (40% reduction) */
+  width: 1.5rem !important;
+}
+
+/* Adjust scroll-to-top button similarly */
+.scroll-to-top-btn {
+  width: 3rem !important;
+  height: 3rem !important;
+  padding: 0.3rem !important;
+}
+
+.scroll-to-top-btn svg {
+  width: 1.3rem !important; /* Reduced from 2.2rem (40% reduction) */
+  height: 1.3rem !important;
+}
+
+/* Reduce box shadow for smaller appearance */
+.music-player__btn,
+.scroll-to-top-btn {
+  box-shadow: 0.05rem 0.05rem 0.6rem rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Mobile adjustments - make even smaller on mobile */
+@media screen and (max-width: 749px) {
+  .music-player__btn,
+  .floating-btn {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    padding: 0.25rem !important;
+  }
+
+  .music-player__btn svg {
+    height: 1.2rem !important;
+    width: 1.2rem !important;
+  }
+
+  .scroll-to-top-btn {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    padding: 0.25rem !important;
+  }
+
+  .scroll-to-top-btn svg {
+    width: 1.1rem !important;
+    height: 1.1rem !important;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY - RESPECT PREFERS-REDUCED-MOTION
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .scroll-reveal,
+  .scroll-reveal.in-view {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

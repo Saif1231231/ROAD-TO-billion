@@ -1,0 +1,513 @@
+/* Parijan Aesthetic Overrides */
+
+/* 1. Sticky Product Info Fix */
+@media screen and (min-width: 750px) {
+  .product__column-sticky {
+    position: sticky;
+    top: 2rem;
+    /* Adjust based on header height */
+    z-index: 2;
+    display: block !important;
+    /* Ensure it's not hidden */
+  }
+
+  .product__info-wrapper {
+    padding-left: 4rem;
+    /* Add spacing between images and info */
+  }
+}
+
+/* 2. Typography Refinement */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'Playfair Display', serif !important;
+  letter-spacing: -0.02em !important;
+  /* Slightly tighter for that classy look */
+  font-weight: 400 !important;
+  text-transform: uppercase;
+}
+
+body,
+p,
+.rte,
+.product__description,
+.button,
+.product-form__input,
+.quantity__label {
+  font-family: 'Inter', sans-serif !important;
+  letter-spacing: 0.02em !important;
+  /* Slightly open for readability */
+  font-weight: 300 !important;
+}
+
+/* 3. Button Styling */
+/* 3. Button Styling */
+.button,
+.shopify-payment-button__button--unbranded,
+.shopify-payment-button__button,
+.sticky-atc__button button {
+  background-color: transparent !important;
+  color: #000000 !important;
+  border-radius: 0px !important;
+  /* Sharp corners */
+  text-transform: uppercase !important;
+  font-size: 1.4rem !important;
+  letter-spacing: 0.1em !important;
+  padding: 0.8rem 2rem !important;
+  /* Thinner button - reduced from 1.2rem */
+  border: 1px solid #000000 !important;
+  box-shadow: none !important;
+}
+
+.button span,
+.shopify-payment-button__button--unbranded span,
+.shopify-payment-button__button span,
+.main-atc__label,
+.main-atc__price,
+.sticky-atc__button button span {
+  color: #000000 !important;
+}
+
+.button:hover,
+.shopify-payment-button__button--unbranded:hover,
+.shopify-payment-button__button:hover,
+.sticky-atc__button button:hover,
+.button:active,
+.button:focus,
+.shopify-payment-button__button:active,
+.shopify-payment-button__button:focus {
+  background-color: #F5F5F5 !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+.button:hover span,
+.shopify-payment-button__button--unbranded:hover span,
+.shopify-payment-button__button:hover span,
+.button:hover .main-atc__label,
+.button:hover .main-atc__price,
+.sticky-atc__button button:hover span,
+.button:active span,
+.button:focus span {
+  color: #000000 !important;
+}
+
+/* Prevent quantity buttons from being black boxes */
+.quantity__button {
+  background-color: transparent !important;
+  color: #000000 !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  width: auto !important;
+}
+
+/* Variant Pills - Ensure they aren't black boxes unless selected */
+.product-form__input input[type=radio]+label {
+  background-color: transparent !important;
+  color: #000000 !important;
+  border: 1px solid #E5E5E5 !important;
+  border-radius: 0px !important;
+}
+
+.product-form__input input[type=radio]:checked+label {
+  background-color: transparent !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+  border-width: 2px !important;
+}
+
+/* 4. Accordion / Collapsible Tab Styling */
+.accordion {
+  background: transparent !important;
+  border: none !important;
+  border-top: 1px solid #E5E5E5 !important;
+  border-bottom: 1px solid #E5E5E5 !important;
+  margin-top: -1px;
+  /* Collapse borders */
+}
+
+.accordion__summary {
+  padding: 1.5rem 0 !important;
+}
+
+.accordion__title {
+  font-size: 1.4rem !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+}
+
+.accordion__content {
+  padding-bottom: 1.5rem !important;
+  color: #555555 !important;
+}
+
+/* 5. Product Card Minimalist */
+.card {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.card__content {
+  text-align: left !important;
+  padding-left: 0 !important;
+}
+
+.card__heading {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.4rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em !important;
+  text-transform: none !important;
+  /* Keep product names normal case or as entered */
+}
+
+/* Reduce gap between product card image and info */
+.card__information {
+  margin-top: 0 !important;
+  padding-top: 0.5rem !important;
+  /* Just a tiny gap */
+}
+
+/* Tighten card spacing */
+.card__inner {
+  margin: 0 !important;
+}
+
+.card-information {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.price {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.3rem !important;
+  color: #000000 !important;
+}
+
+/* Remove black boxes near prices */
+.price::before,
+.price::after,
+.price__container::before,
+.price__container::after,
+.price-item::before,
+.price-item::after {
+  display: none !important;
+  background: transparent !important;
+}
+
+/* Hide any sale badges or price badges that appear as black boxes */
+.badge--price,
+.price__badge,
+.unit-price,
+[class*="price-badge"],
+[class*="sale-badge"] {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+/* Hide ALL product card badges (sale, sold out, etc.) */
+.card__badge,
+.badge--bottom-left,
+.badge {
+  display: none !important;
+}
+
+/* If you want to keep badges but make them minimal */
+/*
+.card__badge .badge {
+  background-color: transparent !important;
+  color: #000000 !important;
+  border: 1px solid #000000 !important;
+  font-size: 1rem !important;
+  padding: 0.2rem 0.6rem !important;
+}
+*/
+
+/* Ensure no black backgrounds on any price-related elements */
+.price,
+.price__container,
+.price-item,
+.price__regular,
+.price__sale {
+  background-color: transparent !important;
+}
+
+/* Quick Add Button Styling - Outlined */
+.quick-add {
+  display: block !important;
+  margin-top: 1rem !important;
+}
+
+.quick-add__submit {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  border: 1px solid #000000 !important;
+  transition: all 0.3s ease !important;
+}
+
+.quick-add__submit span {
+  color: #000000 !important;
+}
+
+.quick-add__submit:hover {
+  background-color: #F5F5F5 !important;
+  color: #000000 !important;
+}
+
+.quick-add__submit:hover span {
+  color: #000000 !important;
+}
+
+/* Hide loading spinners (black boxes) */
+.loading-overlay__spinner {
+  display: none !important;
+}
+
+/* Remove button pseudo-elements that create black boxes */
+.quick-add__submit::before,
+.quick-add__submit::after,
+.button::before,
+.button::after {
+  display: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Override any button shadows and borders that appear as black boxes */
+.quick-add .button::before,
+.quick-add .button::after,
+.card .button::before,
+.card .button::after,
+.card-wrapper .button::before,
+.card-wrapper .button::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Remove any black backgrounds from card elements */
+.card__inner,
+.card__media,
+.card__content,
+.card,
+.card-wrapper {
+  background-color: transparent !important;
+}
+
+/* Ensure media containers don't create black boxes */
+.card .media,
+.card__media .media {
+  background-color: transparent !important;
+}
+
+/* Remove any placeholder or empty divs that might show as black */
+.card__inner:empty,
+.card__media:empty,
+.card__content:empty {
+  display: none !important;
+}
+
+/* Ensure card badges don't have black backgrounds */
+.card__badge {
+  background-color: transparent !important;
+}
+
+/* COMPREHENSIVE BLACK BOX REMOVAL */
+/* Remove ALL potential black backgrounds and overlays */
+.card__inner,
+.card__media,
+.card__content,
+.card,
+.card-wrapper,
+.media,
+.card .media,
+.card__media .media,
+.product__media,
+.product__media-item,
+.product__media-wrapper,
+.deferred-media,
+.deferred-media__poster,
+.loading-overlay,
+.loading-overlay__spinner,
+.modal-overlay,
+.quick-add-modal__content,
+div[style*="background: black"],
+div[style*="background:#000"],
+div[style*="background: rgb(0,0,0)"],
+div[style*="background-color: black"],
+div[style*="background-color:#000"],
+div[style*="background-color: rgb(0,0,0)"] {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Hide any empty or placeholder elements */
+.card__inner:empty,
+.card__media:empty,
+.card__content:empty,
+.media:empty,
+.product__media:empty,
+div:empty[class*="placeholder"],
+div:empty[class*="loading"] {
+  display: none !important;
+}
+
+/* Ensure no black overlays on images */
+.card__media::before,
+.card__media::after,
+.media::before,
+.media::after,
+.product__media::before,
+.product__media::after {
+  display: none !important;
+}
+
+/* 6. Product Page Specifics */
+.product__title h1 {
+  font-size: 3.2rem !important;
+  /* Larger title */
+  margin-bottom: 0.5rem !important;
+  /* Reduced spacing */
+  margin-top: 0 !important;
+  line-height: 1.1 !important;
+}
+
+.product-page-price,
+.price--large {
+  margin-top: 0 !important;
+  /* Reduced spacing */
+}
+
+/* Fix Shrine collage-style absolute positioning */
+.product__media-wrapper,
+.product__media-list,
+.product__media-item,
+.product__info-wrapper,
+.product__column-sticky {
+  position: relative !important;
+  /* Normal flow positioning */
+  margin-top: 0 !important;
+  /* Remove negative margins */
+  margin-bottom: 0 !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+}
+
+/* Product page - restored to original spacing */
+
+/* 7. Modern Slider Navigation - Line Style */
+/* Hide the dots completely */
+media-gallery .slider-buttons--dots {
+  display: none !important;
+}
+
+/* Alternative: If you want a line/progress bar style instead */
+media-gallery .slider-counter__link--dots .dot {
+  width: 30px !important;
+  /* Longer rectangles */
+  height: 3px !important;
+  /* Thin line */
+  border-radius: 2px !important;
+  background-color: #E0E0E0 !important;
+  /* Light grey line */
+  opacity: 1 !important;
+  margin: 0 3px !important;
+  transition: all 0.4s ease !important;
+}
+
+media-gallery .slider-counter__link--active.slider-counter__link--dots .dot {
+  width: 30px !important;
+  height: 3px !important;
+  background-color: #000000 !important;
+  /* Black active line */
+  opacity: 1 !important;
+  margin: 0 3px !important;
+}
+
+/* Slider arrow buttons - minimal and clean */
+.slider-button {
+  background-color: transparent !important;
+  border: none !important;
+  color: #000000 !important;
+  opacity: 0.6 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.slider-button:hover {
+  opacity: 1 !important;
+  background-color: transparent !important;
+}
+
+.slider-button .icon {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+/* Thumbnail navigation - modern clean style */
+.thumbnail[aria-current] {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15) !important;
+  border: 2px solid #1A1A1A !important;
+  border-radius: 8px !important;
+}
+
+.thumbnail {
+  border: 2px solid #E8E8E8 !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  background: #FFFFFF !important;
+}
+
+.thumbnail:hover {
+  opacity: 1 !important;
+  border-color: #C0C0C0 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.thumbnail img {
+  transition: all 0.3s ease !important;
+}
+
+.thumbnail:hover img {
+  transform: scale(1.05) !important;
+}
+
+/* Mobile product page - restored to original spacing */
+
+/* 9. Mobile Sticky ATC Fixes */
+@media screen and (max-width: 749px) {
+  .sticky-atc {
+    padding: 1rem !important;
+  }
+
+  .sticky-atc .button,
+  .sticky-atc__button button {
+    padding: 1rem 1.5rem !important;
+    font-size: 1.2rem !important;
+    min-height: 44px !important;
+    width: auto !important;
+    /* Prevent full width if not needed */
+  }
+
+  .sticky-atc__image {
+    display: none !important;
+    /* Hide image on mobile to save space */
+  }
+
+  .sticky-atc__title {
+    font-size: 1.2rem !important;
+  }
+}

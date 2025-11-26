@@ -1,0 +1,201 @@
+/* ============================================
+   CLASSY SLIDER NAVIGATION STYLES
+   Simple and minimalist slider controls
+   ============================================ */
+
+/* ============================================
+   SLIDER DOTS (Pagination)
+   ============================================ */
+
+/* Splide Slider Dots */
+.splide__pagination__page {
+  --dot-color: rgba(0, 0, 0, 0.2); /* Subtle grey */
+  --dot-size: 6px; /* Smaller, subtle dots */
+  --padding: 8px; /* More spacing between dots */
+  transition: all 0.3s ease;
+}
+
+.splide__pagination__page::before {
+  transition: all 0.3s ease;
+  opacity: 1; /* Remove the default opacity */
+  background: var(--dot-color);
+}
+
+.splide__pagination__page:hover::before {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.4); /* Slightly darker on hover */
+}
+
+.splide__pagination__page.is-active {
+  --dot-size: 8px; /* Slightly larger active dot */
+}
+
+.splide__pagination__page.is-active::before {
+  opacity: 1;
+  background: #000; /* Solid black for active */
+}
+
+/* Slideshow Dots */
+.slider-counter__link--dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px; /* Slightly rounded squares instead of circles */
+  background-color: #D9D9D9; /* Light grey */
+  border: none;
+  padding: 0;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.slider-counter__link--dots:hover .dot {
+  background-color: #B0B0B0; /* Medium grey on hover */
+  transform: none; /* Remove scale transform */
+}
+
+.slider-counter__link--active.slider-counter__link--dots .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #1A1A1A; /* Very dark grey/black for active */
+}
+
+.slider-counter {
+  gap: 8px; /* Tighter spacing between dots */
+}
+
+.slider-counter__link {
+  padding: 6px; /* Cleaner spacing */
+}
+
+/* ============================================
+   ARROW BUTTONS
+   ============================================ */
+
+/* Splide Arrow Buttons */
+.splide__arrow {
+  background: transparent !important;
+  border: none !important;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.splide__arrow:hover {
+  opacity: 1;
+}
+
+.splide__arrow svg {
+  fill: #000;
+}
+
+.splide__arrow:disabled {
+  opacity: 0.3;
+}
+
+/* Slideshow Arrow Buttons */
+.slider-button {
+  background: transparent;
+  border: none;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  color: #000;
+}
+
+.slider-button:not([disabled]):hover {
+  opacity: 1;
+  color: #000;
+}
+
+.slider-button .icon {
+  color: #000;
+}
+
+.slider-button[disabled] {
+  opacity: 0.3;
+}
+
+.slideshow__controls {
+  background: transparent;
+}
+
+/* ============================================
+   THUMBNAIL NAVIGATION
+   ============================================ */
+
+.thumbnail-list__item {
+  border: 2px solid #E8E8E8; /* Light grey border */
+  border-radius: 8px; /* More rounded corners */
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: #FFFFFF;
+}
+
+.thumbnail-list__item:hover {
+  border-color: #C0C0C0; /* Medium grey on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-list__item.is-active,
+.thumbnail-list__item[aria-current="true"] {
+  border: 2px solid #1A1A1A; /* Dark border for active */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Media Gallery Thumbnails */
+[id^="GalleryThumbnails"] .thumbnail-list__item {
+  border: 2px solid #E8E8E8;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+[id^="GalleryThumbnails"] .thumbnail-list__item:hover {
+  border-color: #C0C0C0;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+[id^="GalleryThumbnails"] button[aria-current="true"] {
+  border: 2px solid #1A1A1A;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Thumbnail Images */
+.thumbnail-list__item img {
+  transition: all 0.3s ease;
+}
+
+.thumbnail-list__item:hover img {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.thumbnail-list__item.is-active img,
+.thumbnail-list__item[aria-current="true"] img {
+  opacity: 1;
+}
+
+/* ============================================
+   CLEAN UP DEFAULTS
+   ============================================ */
+
+/* Remove background colors from controls */
+.splide__arrows,
+.slider-buttons,
+.slideshow__controls {
+  background: transparent;
+}
+
+/* Remove unnecessary borders */
+.splide__pagination,
+.slider-counter {
+  background: transparent;
+}
+
+/* Ensure smooth transitions everywhere */
+.splide__arrow,
+.slider-button,
+.splide__pagination__page,
+.slider-counter__link,
+.thumbnail-list__item {
+  transition: all 0.3s ease;
+}

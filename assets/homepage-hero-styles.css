@@ -1,0 +1,439 @@
+/* ============================================
+   LUXURY HOMEPAGE HERO STYLES
+   Elegant, sophisticated hero banner
+   ============================================ */
+
+/* Main Banner/Slideshow Container */
+.banner,
+.slideshow,
+slideshow-component,
+.slideshow-wrapper {
+  position: relative !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove any default margins/padding */
+.banner__media,
+.slideshow__media,
+.banner .media {
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative !important;
+  display: block !important;
+}
+
+/* Hero Image Styling with subtle zoom animation */
+.banner__media img,
+.slideshow__media img,
+.banner .media img,
+.banner__media .banner__media-image-half {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  transition: transform 8s ease-out !important;
+}
+
+.banner:hover .banner__media img,
+.slideshow:hover .slideshow__media img {
+  transform: scale(1.05) !important;
+}
+
+/* Full height hero section - Desktop */
+@media screen and (min-width: 750px) {
+  .banner--medium,
+  .slideshow--medium {
+    min-height: 550px !important;
+    height: 550px !important;
+  }
+
+  .banner--large,
+  .slideshow--large {
+    min-height: 650px !important;
+    height: 650px !important;
+  }
+  
+  /* Force full width on desktop */
+  .banner,
+  .slideshow,
+  slideshow-component {
+    width: 100vw !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .banner--medium,
+  .slideshow--medium {
+    min-height: 55vh !important;
+  }
+  
+  .banner--large,
+  .slideshow--large {
+    min-height: 65vh !important;
+  }
+}
+
+/* Content Overlay Styling - Elegant Centered Layout */
+.banner__content,
+.banner__box,
+.slideshow__text,
+.slideshow__text-wrapper {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  text-align: center !important;
+  z-index: 10 !important;
+  width: 90% !important;
+  max-width: 1000px !important;
+  color: #FFFFFF !important;
+  padding: 3rem !important;
+  animation: fadeInUp 1.2s ease-out !important;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Override any positioning classes */
+.banner__content--top-left,
+.banner__content--top-center,
+.banner__content--top-right,
+.banner__content--middle-left,
+.banner__content--middle-center,
+.banner__content--middle-right,
+.banner__content--bottom-left,
+.banner__content--bottom-center,
+.banner__content--bottom-right {
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: translate(-50%, -50%) !important;
+  text-align: center !important;
+}
+
+/* Elegant Heading Styles - Luxury Serif Font */
+.banner__heading,
+.slideshow__heading,
+h2.banner__heading {
+  font-size: clamp(3.5rem, 7vw, 6.5rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.15 !important;
+  margin-bottom: 2rem !important;
+  color: #FFFFFF !important;
+  text-transform: none !important;
+  letter-spacing: 0.02em !important;
+  font-family: 'Playfair Display', 'Georgia', serif !important;
+  font-style: italic !important;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Refined Subheading */
+.banner__text,
+.banner__text p,
+.slideshow__text-wrapper p,
+.banner .rte p {
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem) !important;
+  line-height: 1.7 !important;
+  margin-bottom: 3rem !important;
+  color: #FFFFFF !important;
+  font-weight: 300 !important;
+  font-family: 'Inter', 'Helvetica Neue', sans-serif !important;
+  letter-spacing: 0.05em !important;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Luxury CTA Button Styling - Sophisticated & Elegant */
+.banner__buttons,
+.slideshow__buttons {
+  display: flex !important;
+  gap: 2rem !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  margin-top: 2.5rem !important;
+}
+
+.banner__buttons .button,
+.slideshow__buttons .button,
+.banner .button--primary,
+.banner .button--secondary {
+  background-color: transparent !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.8) !important;
+  padding: 1.6rem 4rem !important;
+  font-size: 1.4rem !important;
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.2em !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.banner__buttons .button::before,
+.slideshow__buttons .button::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #FFFFFF !important;
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  z-index: -1 !important;
+  display: block !important;
+}
+
+.banner__buttons .button:hover::before,
+.slideshow__buttons .button:hover::before {
+  left: 0 !important;
+}
+
+.banner__buttons .button:hover,
+.slideshow__buttons .button:hover,
+.banner .button--primary:hover,
+.banner .button--secondary:hover {
+  color: #000000 !important;
+  border-color: rgba(255, 255, 255, 1) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+.banner__buttons .button span,
+.slideshow__buttons .button span,
+.banner .button span {
+  color: inherit !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Sophisticated Dark Overlay - Gradient from top */
+.banner::after,
+.slideshow::after,
+slideshow-component::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.3) 40%,
+    rgba(0, 0, 0, 0.4) 100%
+  ) !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+/* Ensure content is above overlay */
+.banner__content,
+.banner__box,
+.slideshow__text-wrapper,
+.slideshow__controls {
+  z-index: 10 !important;
+  position: relative !important;
+}
+
+/* Timer/Countdown Styling (for sales) */
+.banner__box .countdown-timer,
+.slideshow__text .countdown-timer {
+  display: inline-block !important;
+  padding: 1rem 2rem !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 2px solid #FFFFFF !important;
+  border-radius: 4px !important;
+  margin: 1rem 0 !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.countdown-timer__text {
+  color: #FFFFFF !important;
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Elegant Slideshow Navigation - Minimal Luxury Style */
+.slideshow__controls,
+.slider-buttons {
+  position: absolute !important;
+  bottom: 4rem !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 11 !important;
+  background: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+}
+
+/* Hide arrows for cleaner luxury look */
+.slideshow__controls .slider-button--prev,
+.slideshow__controls .slider-button--next,
+.slider-button[name="previous"],
+.slider-button[name="next"] {
+  display: none !important;
+}
+
+/* Refined dots - thin elegant lines */
+.slider-counter {
+  display: flex !important;
+  gap: 0.8rem !important;
+  background: transparent !important;
+}
+
+.slider-counter__link--dots .dot {
+  width: 50px !important;
+  height: 2px !important;
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  border-radius: 1px !important;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  display: block !important;
+}
+
+.slider-counter__link--active .dot,
+.slider-counter__link--active.slider-counter__link--dots .dot {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  width: 60px !important;
+  opacity: 1 !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5) !important;
+}
+
+.slider-counter__link:hover .dot {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  transform: scaleY(1.5) !important;
+}
+
+/* Decorative divider line above content (optional luxury touch) */
+.banner__content::before,
+.slideshow__text-wrapper::before {
+  content: '' !important;
+  display: block !important;
+  width: 60px !important;
+  height: 1px !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  margin: 0 auto 2rem auto !important;
+}
+
+/* Mobile Optimizations */
+@media screen and (max-width: 749px) {
+  .banner__heading,
+  .slideshow__heading,
+  h2.banner__heading {
+    font-size: 2.5rem !important;
+    margin-bottom: 1.2rem !important;
+  }
+  
+  .banner__text,
+  .banner__text p,
+  .slideshow__text-wrapper p,
+  .banner .rte p {
+    font-size: 1.4rem !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .banner__buttons .button,
+  .slideshow__buttons .button {
+    padding: 1.3rem 3rem !important;
+    font-size: 1.2rem !important;
+  }
+  
+  .slideshow__controls,
+  .slider-buttons {
+    bottom: 2rem !important;
+  }
+  
+  .slider-counter__link--dots .dot {
+    width: 35px !important;
+  }
+  
+  .slider-counter__link--active .dot {
+    width: 45px !important;
+  }
+  
+  .banner__content,
+  .banner__box,
+  .slideshow__text,
+  .slideshow__text-wrapper {
+    padding: 2rem 1.5rem !important;
+  }
+}
+
+/* Fix for image upload area - ensure it's visible in editor */
+.banner__media:empty,
+.slideshow__media:empty {
+  min-height: 400px !important;
+  background-color: #F5F5F5 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.banner__media:empty::before,
+.slideshow__media:empty::before {
+  content: 'Click to add image' !important;
+  color: #999999 !important;
+  font-size: 1.4rem !important;
+}
+
+/* Remove any black boxes or overlays that block uploads */
+.banner__media::before,
+.slideshow__media::before {
+  display: none !important;
+}
+
+/* Ensure placeholder is visible for image upload */
+.placeholder-svg {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 400px !important;
+  background-color: #F5F5F5 !important;
+}
+
+/* Desktop-specific fixes */
+@media screen and (min-width: 750px) {
+  /* Full bleed hero on desktop */
+  .index-section:first-child .banner,
+  .index-section:first-child .slideshow,
+  .shopify-section:first-child .banner,
+  .shopify-section:first-child .slideshow {
+    margin-top: 0 !important;
+  }
+  
+  /* Ensure text is always centered and visible */
+  .banner__box {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  /* Page width container shouldn't constrain hero */
+  .banner.page-width,
+  .slideshow.page-width {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+}
